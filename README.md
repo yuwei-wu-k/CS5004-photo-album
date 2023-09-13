@@ -2,14 +2,14 @@
 A photo album animator application that creates 2D animations from shapes using Model-View-Controller architecture, decoupling the description of an algorithm or phenomenon from its visual representation on the screen. This separation will enable the creation of an application that will render an animation according to its textual description.
 
 
-#### Manuel
+### Manuel
 command-line arguments explanation
 ```text
 in "name-of-command-file" -view "type-of-view" [-out "where-output-should-go"] [xmax] [ymax]
 ```
--in "name-of-animation-file" \\
--out "where-output-show-go" \\
--view "text", "svg", "visual", or "playback" \\
+- in "name-of-animation-file" 
+- out "where-output-show-go" 
+- view "text", "svg", "visual", or "playback" 
 
 for example: 
 ```text
@@ -18,7 +18,7 @@ MyProgram -in buildings.txt -v graphical 800 800
 ```
 
 
-#### MVC Design
+### MVC Design
 1. model
    - Album
    - IAlbum Interface
