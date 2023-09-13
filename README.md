@@ -1,36 +1,36 @@
 # CS5004-photo-album
+A photo album animator application that creates 2D animations from shapes using Model-View-Controller architecture, decoupling the description of an algorithm or phenomenon from its visual representation on the screen. This separation will enable the creation of an application that will render an animation according to its textual description.
 
-Many of us use our phones (and cameras) to take pictures of friends and family members,
-and then share those pictures in photo albums.
 
-Pictures can be used to succinctly and effectively illustrate many things.
-For example, a stationary histogram visually depicts the distribution of some data points.
-A histogram with moving bar heights visually depicts music (e.g. a music equalizer).
+# Manuel
+- command-line arguments explanation
+```Java
+in "name-of-command-file" -view "type-of-view" [-out "where-output-should-go"] [xmax] [ymax]
+```
+-in "name-of-animation-file"
+-out "where-output-show-go"
+-view "text", "svg", "visual", or "playback"
 
-This application creates a simple "photo album" from shapes using Model-View-Controller architecture.
+For example: 
+```
+MyProgram -in buildings.txt -out myWeb.html  -v web
+MyProgram -in buildings.txt -v graphical 800 800
+```
 
-I created four packages, model, controller, utility, and view for my Shapes Photo Album.
 
-The model represents a shapes photo album.
-
-For views, I implemented graphical view and web/SVG view.
-
-In GraphicalView class, I used Java Swing to create three panels to hold different components.
-north panel: snapshots ID and description
-center panel: current snapshot
-south panel: prev, select, next, and quit buttons
-
-For SVGView class, as this is a textual output of the photo album, I applied StringBuilder to product
-html text and with outputFile method I can write the content to a new file.
-
-The Panel as a helper class is responsible for drawing shapes for GraphicalView class.
-
-As Controller class manages and coordinates information flow between the modeland views,
-I created two constructors and visible methods, each corresponding to a View class.
-To handle interactions with buttons in the graphic View, I also added a helper method
-called actionPerformed that performs different actions based on which button is clicked.
-
-The FileParse class is to read from a text file that the model will execute.
-
-Finally, the PhotoAlbumMain class is the entry of the program. I made it to adjust the
-command-line arguments to make sure it works for valid input according to the given instruction.
+# MVC Design
+1. model
+   - Album
+   - IAlbum Interface
+2. view
+   - GraphicalView
+   - Panel
+   - SVGView
+3. controler
+   - Controller
+4. shape
+   - AbstractShape
+   - IShape Interface
+   - Color, Oval, Position, Recatangle class
+5. utility
+   - FilePars
