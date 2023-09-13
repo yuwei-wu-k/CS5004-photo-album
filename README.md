@@ -3,8 +3,8 @@ A photo album animator application that creates 2D animations from shapes using 
 
 
 # Manuel
-- command-line arguments explanation
-```Java
+command-line arguments explanation
+```text
 in "name-of-command-file" -view "type-of-view" [-out "where-output-should-go"] [xmax] [ymax]
 ```
 -in "name-of-animation-file"
@@ -12,7 +12,7 @@ in "name-of-command-file" -view "type-of-view" [-out "where-output-should-go"] [
 -view "text", "svg", "visual", or "playback"
 
 For example: 
-```
+```text
 MyProgram -in buildings.txt -out myWeb.html  -v web
 MyProgram -in buildings.txt -v graphical 800 800
 ```
